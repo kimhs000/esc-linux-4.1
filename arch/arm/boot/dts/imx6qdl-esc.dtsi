@@ -166,7 +166,7 @@
  		default_bpp = <24>; 
  		int_clk = <0>; 
  		late_init = <0>; 
- 		status = "disabled"; 
+ 		status = "okay"; 
 	}; 
  
  
@@ -211,7 +211,7 @@
 		default_ifmt = "RGB565";
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_ipu1>;
-		status = "okay";
+		status = "disabled";
 	};
 
 	backlight {
@@ -219,7 +219,7 @@
 		pwms = <&pwm1 0 5000000>;
 		brightness-levels = <0 4 8 16 32 64 128 255>;
 		default-brightness-level = <7>;
-		status = "okay";
+		status = "disabled";
 	};
 
 	v4l2_cap_0 {
@@ -672,8 +672,8 @@
 				MX6QDL_PAD_EIM_D16__ECSPI1_SCLK         0x1B0B0
 				MX6QDL_PAD_EIM_D17__ECSPI1_MISO         0x1B0B0
 				MX6QDL_PAD_EIM_D18__ECSPI1_MOSI         0x1B0B0
-//				MX6QDL_PAD_EIM_EB2__GPIO2_IO30		0x1B0B0
-				MX6QDL_PAD_EIM_EB2__GPIO2_IO30		0x80000000 /* CS0 */
+				MX6QDL_PAD_EIM_EB2__GPIO2_IO30		0x1b0b0
+//				MX6QDL_PAD_EIM_EB2__GPIO2_IO30		0x80000000 /* CS0 */
 			>;
 		};
 
@@ -682,9 +682,9 @@
 
 				MX6QDL_PAD_SD1_CLK__ECSPI5_SCLK         0x1B0B0
 				MX6QDL_PAD_SD1_CMD__ECSPI5_MOSI         0x1B0B0
-				MX6QDL_PAD_SD1_DAT0__ECSPI5_MISO         0x1B0B0
-//				MX6QDL_PAD_SD1_DAT1__GPIO1_IO17		0x1B0B0
-				MX6QDL_PAD_SD1_DAT1__GPIO1_IO17		0x80000000 /* CS0 */
+				MX6QDL_PAD_SD1_DAT0__ECSPI5_MISO        0x1B0B0
+				MX6QDL_PAD_SD1_DAT1__GPIO1_IO17		0x1B0B0
+//				MX6QDL_PAD_SD1_DAT1__GPIO1_IO17		0x80000000 /* CS0 */
 			>;
 		};
 
@@ -834,7 +834,7 @@
 			>;
 		};
 
-		pinctrl_usdhc2: usdhc2grp {
+/*		pinctrl_usdhc2: usdhc2grp {
 			fsl,pins = <
 				MX6QDL_PAD_SD2_CMD__SD2_CMD		0x17059
 				MX6QDL_PAD_SD2_CLK__SD2_CLK		0x10059
@@ -847,7 +847,7 @@
 				MX6QDL_PAD_NANDF_D6__SD2_DATA6		0x17059
 				MX6QDL_PAD_NANDF_D7__SD2_DATA7		0x17059
 			>;
-		};
+		};*/
 
 		pinctrl_usdhc3: usdhc3grp {
 			fsl,pins = <
